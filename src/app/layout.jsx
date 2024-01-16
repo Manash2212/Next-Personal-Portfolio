@@ -1,5 +1,5 @@
 import { Roboto, Lemon } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,8 +19,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable}, ${lemon.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={`${roboto.variable}, ${lemon.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
